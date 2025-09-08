@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1", 
+        "nome": "Rio de Janeiro, RJ",
+        "imagem": "https://www.zzztour.com.br/painel/admin/upload/pacotes/des_184_03.jpg",
+        "descricao": "O Rio é famoso por sua combinação de praias, montanhas e atrações icônicas como o Cristo Redentor e o Pão de Açúcar. É um destino ideal para quem busca uma mistura de cultura, história e paisagens.",
+        "valor": "Pacotes a partir de R$1.500",
+        "hotel": "Belmond Copacabana Palace"
+    },
+    {
+        "id": "2", 
+        "nome": "Foz do Iguaçu, PR",
+        "imagem": "https://purebrasil.net/wp-content/uploads/2021/05/foz-do-iguacu-pure-brasil-parque1.jpg",
+        "descricao": "Casa das impressionantes Cataratas do Iguaçu, essa cidade também oferece o Parque das Aves e a monumental usina de Itaipu. É um ótimo destino para os amantes da natureza e da aventura.",
+        "valor": "Pacotes a partir de R$1.200",
+        "hotel": "Recanto Cataratas"
+    },
+    {
+        "id": "3", 
+        "nome": "São Paulo, SP",
+        "imagem": "https://cacb.org.br/wp-content/uploads/2024/09/iStock-1389974541-800x600.jpg",
+        "descricao": "A capital financeira do Brasil é vibrante, oferecendo atrações como a icônica Avenida Paulista, o MASP e o Parque Ibirapuera, ideal para passeios urbanos e culturais.",
+        "valor": "Pacotes a partir de R$800",
+        "hotel": "Maksoud Plaza"
+    },
+    {
+        "id": "4", 
+        "nome": "Salvador, BA",
+        "imagem": "https://www.costadosauipe.com.br/images/news/0473/elevador-lacerda-salvador.jpg",
+        "descricao": "Rica em cultura e história, Salvador encanta com seu centro histórico, praias e atrações famosas como o Pelourinho e o Elevador Lacerda.",
+        "valor": "Pacotes a partir de R$1.400",
+        "hotel": "Fasano Salvador"
+    },
+    {
+        "id": "5", 
+        "nome": "Florianópolis, SC",
+        "imagem": "https://www.jurereoceanflats.com/uploads/img/blogs/1694303768-aniversario-de-florianopolis-cin.jpg",
+        "descricao": "Conhecida por suas praias paradisíacas e vida noturna animada, a Ilha da Magia é um destino perfeito para relaxar e curtir belezas naturais.",
+        "valor": "Pacotes a partir de R$1.300",
+        "hotel": "Il Campanario Villaggio Resort"
+    },
+    {
+        "id": "6", 
+        "nome": "Gramado, RS",
+        "imagem": "https://portalgramado.s3.sa-east-1.amazonaws.com/the-city/jKIt2gVIpkmOibAtrMHrv1aUZIH4WDErAYhvIGdT.png",
+        "descricao": "Gramado encanta com seu charme europeu, festivais e atrações como o Lago Negro e o evento Natal Luz, sendo um destino acolhedor em qualquer época do ano.",
+        "valor": "Pacotes a partir de R$1.600",
+        "hotel": "Hotel Ritta Höppner"
+    },
+    {
+        "id": "7", 
+        "nome": "Fernando de Noronha, PE",
+        "imagem": "https://i0.wp.com/documentodeviagem.com/wp-content/uploads/2019/10/fernando-de-noronha-documento-de-viagem-1024x768_edited.jpg?fit=800%2C600&ssl=1",
+        "descricao": "Este arquipélago paradisíaco é um dos melhores destinos de ecoturismo do Brasil, famoso por suas praias preservadas e vida marinha rica.",
+        "valor": "Pacotes a partir de R$5.000, aéreo e hospedagem",
+        "hotel": "Pousada Maravilha"
+    },
+    {
+        "id": "8", 
+        "nome": "Jericoacoara, CE",
+        "imagem": "https://cooperjeri.com.br/wp-content/uploads/2022/10/jericoacoara-ceara.jpg",
+        "descricao": "Com paisagens impressionantes, Jericoacoara é ideal para relaxar e aproveitar belezas naturais como a Pedra Furada e a Duna do Pôr do Sol.",
+        "valor": "Pacotes a partir de R$5.000",
+        "hotel": "Essenza Hotel"
+    },
+    {
+        "id": "9", 
+        "nome": "Bonito, MS",
+        "imagem": "https://echoestour.com/wp-content/uploads/2023/02/ceita-core-cachoeiras-bonito-2.jpg",
+        "descricao": "Um paraíso ecológico, Bonito oferece rios cristalinos e cavernas únicas, sendo perfeito para turismo de aventura e exploração natural.",
+        "valor": "Pacotes a partir de R$1.800",
+        "hotel": "Zagaia Eco Resort,"
+    },
+    {
+        "id": "10", 
+        "nome": "Chapada Diamantina, BA",
+        "imagem": "https://dbui4lb3qzbcx.cloudfront.net/imagens/9eb02ae58f40985207093e0c7bf45aec.jpeg",
+        "descricao": "Famosa por suas cachoeiras, montanhas e grutas, a Chapada é ideal para quem busca contato direto com a natureza e trilhas de tirar o fôlego.",
+        "valor": "Pacotes a partir de R$1.200",
+        "hotel": "Hotel Canto das Águas"
+    }
+]

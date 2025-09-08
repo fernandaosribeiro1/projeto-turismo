@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Turismo</title>    
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .chart-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-2025">
+        <nav class="navmenu">
+            <a href="#" class="logo-link">
+                <img src="img/logo.turismo.png" alt="Logo Wanderlust" class="logo-2025">
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links-2025">
+                    <li><a href="paginainicial.html">home</a></li>
+                    <li><a href="destinografico.html">Gráficos</a></li>
+                    <li><a href="pacotes.html">Pacotes</a></li>
+              
+                    <li><a href="#">Sobre Nós</a></li>
+                </ul>
+                <div class="logout">
+                    <a href="./login.html" class="logout-link-2025">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-graficos">
+        <h1 class="h1-grafico">Ocupação por Temporada em Cada Destino</h1>
+        <div class="chart-container">
+            <canvas id="ocupacaoPorTemporadaChart"></canvas>
+            <button class="btn-estilizado" onclick="trocarTipoGrafico('ocupacaoPorTemporadaChart', ocupacaoPorTemporadaChart)">Alternar Gráfico</button>
+        </div>
+
+        <h2 class="h1-grafico">Ocupação Média por Mês</h2>
+        <div class="chart-container">
+            <canvas id="ocupacaoPorMesChart"></canvas>
+            <button class="btn-estilizado" onclick="trocarTipoGrafico('ocupacaoPorMesChart', ocupacaoPorMesChart)">Alternar Gráfico</button>
+        </div>
+
+        <h2 class="h1-grafico">Pacotes Vendidos por Destino</h2>
+        <div class="chart-container">
+            <canvas id="pacotesVendidosChart"></canvas>
+            <button class="btn-estilizado" onclick="trocarTipoGrafico('pacotesVendidosChart', pacotesVendidosChart)">Alternar Gráfico</button>
+        </div>
+
+        <h2 class="h1-grafico">Satisfação por Destino</h2>
+        <div class="chart-container">
+            <canvas id="satisfacaoPorDestinoBarChart"></canvas>
+            <button class="btn-estilizado" onclick="trocarTipoGrafico('satisfacaoPorDestinoBarChart', satisfacaoPorDestinoBarChart)">Alternar Gráfico</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Agência de Turismo. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Dados e configuração dos gráficos
+        const dadosOcupacao = {
+            labels: ["Verão", "Outono", "Inverno", "Primavera"],
+            datasets: [
+                { label: "Rio de Janeiro", data: [80, 60, 50, 75], backgroundColor: "rgba(255, 99, 132, 0.5)", borderColor: "rgba(255, 99, 132, 1)", borderWidth: 1 },
+                { label: "Foz do Iguaçu", data: [70, 65, 85, 60], backgroundColor: "rgba(54, 162, 235, 0.5)", borderColor: "rgba(54, 162, 235, 1)", borderWidth: 1 },
+                { label: "Gramado", data: [55, 50, 95, 45], backgroundColor: "rgba(75, 192, 192, 0.5)", borderColor: "rgba(75, 192, 192, 1)", borderWidth: 1 },
+                { label: "Salvador", data: [90, 70, 55, 85], backgroundColor: "rgba(255, 206, 86, 0.5)", borderColor: "rgba(255, 206, 86, 1)", borderWidth: 1 }
+            ]
+        };
+        const configOcupacaoPorTemporada = { type: 'bar', data: dadosOcupacao, options: { responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Taxa de Ocupação por Temporada' } }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Ocupação (%)' } }, x: { title: { display: true, text: 'Temporada' } } } } };
+        const ocupacaoPorTemporadaChart = new Chart(document.getElementById('ocupacaoPorTemporadaChart').getContext('2d'), configOcupacaoPorTemporada);
+
+        const dadosOcupacaoPorMes = {
+            labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+            datasets: [
+                { label: "Rio de Janeiro", data: [80, 75, 70, 60, 50, 55, 85, 90, 60, 65, 70, 80], backgroundColor: "rgba(255, 99, 132, 0.5)", borderColor: "rgba(255, 99, 132, 1)", borderWidth: 1 },
+                { label: "Salvador", data: [85, 80, 60, 50, 45, 55, 75, 95, 55, 60, 65, 85], backgroundColor: "rgba(255, 206, 86, 0.5)", borderColor: "rgba(255, 206, 86, 1)", borderWidth: 1 }
+            ]
+        };
+        const configOcupacaoPorMes = { type: 'line', data: dadosOcupacaoPorMes, options: { responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Ocupação Média por Mês' } }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Ocupação (%)' } }, x: { title: { display: true, text: 'Mês' } } } } };
+        const ocupacaoPorMesChart = new Chart(document.getElementById('ocupacaoPorMesChart').getContext('2d'), configOcupacaoPorMes);
+
+        const dadosPacotesVendidos = {
+            labels: ["Rio de Janeiro", "Foz do Iguaçu", "Gramado", "Salvador"],
+            datasets: [
+                { label: "Econômico", data: [50, 30, 40, 70], backgroundColor: "rgba(75, 192, 192, 0.5)", borderColor: "rgba(75, 192, 192, 1)", borderWidth: 1 },
+                { label: "Intermediário", data: [40, 25, 35, 50], backgroundColor: "rgba(54, 162, 235, 0.5)", borderColor: "rgba(54, 162, 235, 1)", borderWidth: 1 },
+                { label: "Luxo", data: [10, 20, 15, 30], backgroundColor: "rgba(255, 99, 132, 0.5)", borderColor: "rgba(255, 99, 132, 1)", borderWidth: 1 }
+            ]
+        };
+        const configPacotesVendidos = { type: 'bar', data: dadosPacotesVendidos, options: { responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Pacotes Vendidos por Destino' } }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Número de Pacotes' } }, x: { title: { display: true, text: 'Destino' } } } } };
+        const pacotesVendidosChart = new Chart(document.getElementById('pacotesVendidosChart').getContext('2d'), configPacotesVendidos);
+
+        const dadosSatisfacaoBarra = {
+            labels: ["Acomodações", "Transporte", "Atrações", "Segurança"],
+            datasets: [
+                { label: "Rio de Janeiro", data: [4, 3.5, 4.5, 4], backgroundColor: "rgba(255, 159, 64, 0.6)", borderColor: "rgba(255, 159, 64, 1)", borderWidth: 1 },
+                { label: "Foz do Iguaçu", data: [3.5, 4, 4.5, 3.8], backgroundColor: "rgba(75, 192, 192, 0.6)", borderColor: "rgba(75, 192, 192, 1)", borderWidth: 1 }
+            ]
+        };
+        const configSatisfacaoBarra = { type: 'bar', data: dadosSatisfacaoBarra, options: { responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Satisfação por Destino' } }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Pontuação' } }, x: { title: { display: true, text: 'Categoria' } } } } };
+        const satisfacaoPorDestinoBarChart = new Chart(document.getElementById('satisfacaoPorDestinoBarChart').getContext('2d'), configSatisfacaoBarra);
+
+        // Função para trocar o tipo de gráfico
+        function trocarTipoGrafico(chartId, chartInstance) {
+            const novoTipo = chartInstance.config.type === 'bar' ? 'line' : 'bar';
+            chartInstance.config.type = novoTipo;
+            chartInstance.update();
+        }
+    </script>
+</body>
+
+</html>

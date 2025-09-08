@@ -1,0 +1,754 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+
+/* Estilos para o Cabeçalho (Header) */
+.header-2025 {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px; /* Define uma altura fixa para a barra de navegação */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Novo estilo para o grupo de links e logout */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Espaçamento entre o menu e o botão de logout */
+}
+
+.logo-2025 {
+    height: 150px; /* Tamanho da logo em telas grandes */
+    width: auto; /* Mantém a proporção da logo */
+    max-width: 100%; /* Garante que a logo nunca seja maior que seu container */
+}
+
+.nav-links-2025 {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem; /* Espaçamento entre os links de navegação */
+}
+
+.nav-links-2025 a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links-2025 a:hover {
+    color: #4b89ac;
+}
+
+.logout {
+    
+    display: flex;
+    align-items: center;
+}
+
+.logout-link-2025 {
+    display: flex;
+    align-items: center;
+    color: #545b63;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logout-link-2025:hover {
+    color: #3f6080;
+}
+
+.logout span {
+    margin-left: 8px;
+}
+
+
+/* HERO SECTION MODERNA */
+.hero {
+    position: relative;
+    height: 100vh; /* ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Imagem de fundo com efeito suave */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%); /* escurece levemente para destacar o texto */
+    transition: transform 0.5s ease;
+}
+
+/* Pequeno efeito de zoom ao passar o mouse */
+.hero:hover .hero-image {
+    transform: scale(1.05);
+}
+
+/* Conteúdo centralizado */
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+/* Título principal */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Efeito leve ao passar o mouse */
+.hero-content h1:hover {
+    transform: scale(1.05);
+    letter-spacing: 6px;
+}
+
+/* Botão chamativo (opcional) */
+.hero-content .hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #FFD700; /* dourado */
+    color: #003366;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-content .hero-btn:hover {
+    background: #FFC107;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Cards gerais */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    width: 300px; /* largura fixa */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Imagem do card mantendo proporção */
+.card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* mantém proporção uniforme para todas */
+    object-fit: cover; /* cobre o card sem distorção */
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.3em;
+    color: #004080;
+}
+
+.card-content p {
+    font-size: 0.95em;
+    color: #555;
+    flex: 1;
+}
+
+/* Botão Saiba Mais */
+.card-content .btn {
+    padding: 10px 15px;
+    background-color: #FFD700; /* dourado */
+    color: #003366;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.card-content .btn:hover {
+    background-color: #FFC107;
+    color: #003366;
+    transform: scale(1.05);
+}
+
+
+
+/* Estilo dos títulos e gráficos */
+.h1-grafico {
+    color: #00539C;
+    font-size: 2.0em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.chart-container {
+    margin-bottom: 80px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-estilizado {
+    background-color: #00539C;
+    /* Azul principal */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+}
+
+.btn-estilizado:hover {
+    background-color: #FFD700;
+    /* Dourado no hover */
+    color: #00539C;
+    /* Texto em azul ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra mais forte */
+    transform: scale(1.05);
+    /* Leve crescimento */
+}
+
+.btn-estilizado:active {
+    background-color: #003366;
+    /* Azul mais escuro ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra mais leve */
+    transform: scale(0.95);
+    /* Leve redução */
+}
+
+/* Estilização da seção de cabeçalho */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    /* Padding menor para reduzir a altura */
+    position: relative;
+}
+
+/* Estilização para a logo centralizada e menor */
+.logo-center {
+    width: 100px;
+    /* Diminua o tamanho da logo */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+/* Posiciona o ícone de login à direita */
+.header-icons {
+    font-size: 25px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilo para o texto de boas-vindas */
+.welcome-text {
+    font-size: 20px;
+    /* Texto um pouco menor */
+    color: #333;
+    /* Ajuste a cor conforme necessário */
+    text-decoration: none;
+}
+
+/* estilo dos cards da api */
+
+.card {
+      font-family: 'Montserrat', sans-serif;
+    margin: 40px;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(105%);
+    cursor: pointer;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    max-width: 100%;
+    /* A imagem ocupará toda a largura disponível */
+    height: auto;
+}
+
+.link-destino {
+    text-decoration: none;
+}
+
+/* estilo dos pacotes */
+.carouselExampleControls{
+    padding:5%;
+}
+
+.pacote-titulo {
+    text-align: center;
+    margin: 40px;
+}
+
+
+/* Estilo da página de login */
+#container-login {
+    max-width: 400px;
+    margin: 70px auto;
+    background: #ffffff;
+    /* borda e sombra */
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #aba4a4;
+}
+
+#container-login h1 {
+    color: #1C1C1C;
+    font-size: 26px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#container-login p {
+    text-align: center;
+}
+
+#container-login a {
+    text-decoration: none;
+    color: #743a2f;
+}
+
+a.container-login:visited {
+    color: #4B3B2A
+}
+
+
+/* Rodapé */
+footer {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+footer .footer-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #1abc9c;
+}
+
+footer .social-media a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #1abc9c;
+}
+
+/*boas vindas */
+.boas-vindas {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Ajusta a altura mínima para a altura da tela */
+    text-align: center;
+}
+
+
+
+/* Container de Boas-vindas */
+.container-welcome {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    max-width: 450px;
+    text-align: center;
+    margin: 50px auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Logo */
+.logo-boasvindas {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos Títulos */
+.title-main {
+    color: #003366; /* Azul escuro confiável */
+    margin: 15px 0;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.title-sub {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Container geral */
+.container {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Ajuste para títulos dentro do container */
+.container h1, .container h2 {
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contagem regressiva */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.4em;
+    color: #ffcc00; /* Amarelo vibrante */
+    margin-top: 20px;
+}
+
+/* Caixas do cronômetro */
+.time-unit {
+    background: linear-gradient(135deg, #3b82f6, #2563eb); /* Azul turismo */
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, background 0.3s;
+    font-weight: 600;
+}
+
+/* Hover no cronômetro */
+.time-unit:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+
+/* Import da fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Container principal */
+#container-login {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Título */
+#container-login h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #003366; /* Azul escuro elegante */
+}
+
+/* Campos de formulário */
+.form-control {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-control label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-control input[type="text"],
+.form-control input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    background-color: #fdfdfd;
+    border: none;   
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;  
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+/* Efeito no foco */
+.form-control input[type="text"]:focus,
+.form-control input[type="password"]:focus {
+    background-color: #fffef5; /* tom amarelado suave */
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.4); /* Glow amarelo */
+}
+
+/* Botão */
+.btn-entrar {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #003366;
+    background: linear-gradient(135deg, #ffcc00, #ffd633); /* Amarelo turismo */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+/* Hover botão */
+.btn-entrar:hover {
+    background: linear-gradient(135deg, #ffd633, #ffb700);
+    transform: translateY(-2px);
+}
+
+/* Link auxiliar */
+#container-login a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #0056b3; /* Azul médio */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#container-login a:hover {
+    color: #003366;
+}
+
+
+
+.pacote-titulo {
+    /* Estilo da Faixa */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFD700;
+    color: #003366;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0; 
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+/* --- 3. ESPAÇAMENTO ENTRE AS SEÇÕES --- */
+/* O Bootstrap já coloca uma margem (mt-5) nas suas seções, o que é ótimo.
+   Esta regra apenas garante um espaço consistente abaixo da faixa, antes dos cards. */
+.pacotes-rio,
+.pacotes-foz,
+.pacotes-sp,
+.pacotes-salvador,
+.pacotes-floripa,
+.pacotes-gramado,
+.pacotes-noronha,
+.pacotes-ceara,
+.pacotes-bonito,
+.pacotes-chapada {
+    margin-top: 2.5rem;
+}
+
+/* --- 4. ESTILO DOS CARDS (TUDO CENTRALIZADO) --- */
+.custom-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    height: 100%;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+.custom-card .card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.custom-card .card-body {
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-card .card-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #004080;
+    margin-bottom: 0.5rem;
+}
+
+.custom-card .card-subtitle {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.custom-card .card-text {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.custom-card .flex-grow-1 {
+    flex-grow: 1;
+}
+
+.custom-card .mt-auto {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.custom-card .fw-bold {
+    font-size: 1.6rem !important;
+    color: #333 !important;
+    margin-bottom: 1rem;
+}
+
+.custom-card .btn.btn-primary {
+    background-color: #FFD700 !important;
+    border-color: #FFD700 !important;
+    color: #003366 !important;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: auto;
+    min-width: 150px;
+}
+
+.custom-card .btn.btn-primary:hover {
+    background-color: #FFC107 !important;
+    border-color: #FFC107 !important;
+    transform: scale(1.05);
+}
+
+
