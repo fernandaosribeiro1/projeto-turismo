@@ -55,8 +55,6 @@ Embora o projeto tenha cumprido seus objetivos acadêmicos, algumas melhorias po
 
 ## 🚀 Como Executar o Projeto
 
-A forma mais fácil de ver o projeto é acessando a **[demo online](link-para-seu-github-pages)**.
-
 Para executar localmente, siga os passos:
 1.  **Clone o repositório:**
     ```bash
@@ -72,6 +70,7 @@ Para executar localmente, siga os passos:
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **[Seu Nome Completo]**.
 
+Desenvolvido por **[Fernanda Ribeiro - Técnica em Informática e graduanda no curso de Sistemas p/ Internet]**.
+Fico aberta a sugestões de melhorias, vamos nos conectar?
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fernandaosribeiro1/)
