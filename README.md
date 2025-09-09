@@ -71,6 +71,7 @@ Para executar localmente, siga os passos:
 ## 👨‍💻 Autor
 
 
-Desenvolvido por **[Fernanda Ribeiro - Técnica em Informática e graduanda no curso de Sistemas p/ Internet]**.
-Fico aberta a sugestões de melhorias, vamos nos conectar?
+Desenvolvido por ** Fernanda Ribeiro - Técnica em Informática e graduanda no curso de Sistemas p/ Internet **.
+Fico aberta a sugestões de melhorias! Sempre é tempo de aprender...
+Vamos nos conectar? Clique aqui e acesse meu perfil no LinkedIn:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fernandaosribeiro1/)
